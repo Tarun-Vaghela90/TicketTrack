@@ -11,7 +11,8 @@ router.get("/findusertickets", fetchuser, async (req, res) => {
 
     res.json(tickets);
   } catch (error) {
-    
+    console.error(error.message);
+    res.status(500).send("Some error occurred");
   }
 });
 
