@@ -50,7 +50,8 @@ router.post(
         date_time,
         location,
         price,
-      
+        image,
+        user: req.user.id,
       });
       const savedEvent = await event.save();
 
